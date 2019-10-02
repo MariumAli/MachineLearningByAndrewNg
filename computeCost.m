@@ -20,8 +20,9 @@ J = 0;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
+temp = (X * theta) - y;
 for i=1:m
-    J = J + (transpose(theta) * X(i,:)' - y(i))^2;
+    J = J + (temp(i))^2;
 end
 
 J = J / (2 * length(X));
